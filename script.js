@@ -66,10 +66,14 @@ function playGame() {
   return choice;
 }
 
-let playOrNot = parseInt(prompt("Do you want to play? (1-0)"));
-if (playOrNot) {
-  let choice = true;
-  while (choice) {
-    choice = playGame();
+function main() {
+  let playOrNot = parseInt(prompt("Do you want to play? (1-0)"));
+  if (playOrNot) {
+    let choice = true;
+    while (choice) {
+      choice = playGame();
+    }
   }
-}   
+}
+
+main();
