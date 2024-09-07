@@ -54,14 +54,22 @@ function playGame() {
     playRound(humanSelection, computerSelection);
   }
 
-  if (humanScore > computerScore) console.log("You are the winner!");
-  else console.log("You lose :( try again");
+  if (humanScore > computerScore) console.log("You are the winner!\n");
+  else console.log("You lose :( try again\n");
 
   humanScore = 0;
   computerScore = 0;
+
+  // PROMPT the user if he/she wants to play again
+  let choice = parseInt(prompt("Do you want to play again? (1-0)"));
+
+  return choice;
 }
 
 let playOrNot = parseInt(prompt("Do you want to play? (1-0)"));
-
-if (playOrNot) playGame();
-
+if (playOrNot) {
+  let choice = true;
+  while (choice) {
+    choice = playGame();
+  }
+}   
