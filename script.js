@@ -2,18 +2,14 @@ function getComputerChoice() {
   // Create a random number between 1-3
   let randomNum = Math.floor(Math.random() * 3) + 1;
 
-  // IF number equals zero return "rock"
   if (randomNum === 1) return "rock";
-  // ELSEIF number equals 1 return "paper"
   else if (randomNum === 2) return "paper";
-  // ELSE return "scissors"
   else return "scissors";
 }
 
 function getHumanChoice() {
-  // PROMPT the user for a number and put it in variable choice
   let choice = prompt("rock, paper, or scissors?");
-  // RETURN the choice
+  // RETURN the choice with lower case to account for different formats (RocK, ROCK, roCk, etc)
   return choice.toLowerCase();
 }
 
@@ -48,6 +44,7 @@ function playGame() {
       console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
     }
   }
+  // Play 5 rounds
   for (let i = 1; i <= 5; ++i) {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
@@ -60,7 +57,6 @@ function playGame() {
   humanScore = 0;
   computerScore = 0;
 
-  // PROMPT the user if he/she wants to play again
   let choice = parseInt(prompt("Do you want to play again? (1-0)"));
 
   return choice;
