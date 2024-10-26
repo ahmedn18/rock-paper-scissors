@@ -9,7 +9,6 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   let choice = prompt("rock, paper, or scissors?");
-  // RETURN the choice with lower case to account for different formats (RocK, ROCK, roCk, etc)
   return choice.toLowerCase();
 }
 
